@@ -16,6 +16,7 @@ class CreateArquivosTable extends Migration
         Schema::create('arquivos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('path');
+            $table->string('origem');
             $table->boolean('orcamento');
             $table->boolean('visivelCliente');
             $table->unsignedBigInteger('orcamento_id');

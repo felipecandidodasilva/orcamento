@@ -49,11 +49,7 @@ class OrcamentoController extends Controller
         return view('orcamento.index', compact('orcamentos','dadosPagina'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         $dataIni = session('dataIni', date('Y-m-01'));
@@ -78,17 +74,13 @@ class OrcamentoController extends Controller
             ]
         ];
         $status = Status::all();
+        $orcamento = new Orcamento(); // para preencher as variáveis do formulário
 
     
-        return view('orcamento.create', compact('users','dadosPagina','status'));
+        return view('orcamento.create', compact('users','dadosPagina','status','orcamento'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         $input = $request->all();
@@ -108,23 +100,13 @@ class OrcamentoController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Model\orcamento  $orcamento
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(orcamento $orcamento)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Model\orcamento  $orcamento
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(orcamento $orcamento)
     {
         $users = User::all();
@@ -147,10 +129,30 @@ class OrcamentoController extends Controller
                 ],
             ]
         ];
-        $status = Status::all();
-        $arquivos = $orcamento->arquivos()->get();
 
-        return view('orcamento.update',compact('orcamento','dadosPagina','users','status','arquivos'));
+        $listaArquivos = [
+            [
+                'titulo' => 'Orçamentos',
+                'arquivos' => $orcamento->arquivos()->where('orcamento', true)->get()
+            ],
+            [
+                'titulo' => 'Arquivos da Empresa',
+                    'arquivos' => $orcamento->arquivos()->where('visivelCliente', false)->get()
+            ],
+            [
+                'titulo' => 'Arquivos Para o Cliente',
+                'arquivos' => $orcamento->arquivos()->where('visivelCliente', true)->where('visivelCliente', true)->get()
+            ],
+            [
+                'titulo' => 'Arquivos do Cliente',
+                'arquivos' => $orcamento->arquivos()->where('origem', 'Cliente')->get()
+            ],
+        ];
+        $status = Status::all();
+        //dd($orcamento->arquivos()->where('orcamento', true)->get());
+        $put = true; //Define o método para o formulário, já que o mesmo serve pra update e create
+
+        return view('orcamento.update',compact('orcamento','dadosPagina','users','status','put','listaArquivos'));
     }
 
     /**

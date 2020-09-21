@@ -20,25 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4482c1ee-b176-4157-995e-c675cdd34560" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/status/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/status/statusForm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/orcamento/formOrcamento.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/sftp cmetal.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/sftp_gmeletrica.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrcamentoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrcamentoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Orcamento.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Orcamento.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/arquivo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/arquivo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/status.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/status.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/adminlte/pt-br/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/adminlte/pt-br/adminlte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_12_135347_create_arquivos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_12_135347_create_arquivos_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/orcamento/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/orcamento/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/orcamento/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/orcamento/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/transacoes/io-update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/transacoes/io-update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/form-update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/form-update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +172,7 @@
       <workItem from="1600134147259" duration="4710000" />
       <workItem from="1600132428377" duration="2863000" />
       <workItem from="1600132781145" duration="13866000" />
+      <workItem from="1600562697918" duration="7172000" />
     </task>
     <servers />
   </component>
@@ -204,18 +192,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1066" y="116" key="SettingsEditor" timestamp="1600134295797">
+    <state x="942" y="312" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600563907949">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state x="1066" y="116" key="SettingsEditor/0.0.2560.1050@0.0.2560.1050" timestamp="1600134295797" />
+    <state x="942" y="312" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1050@0.0.2560.1050" timestamp="1600563907949" />
+    <state x="1066" y="116" key="SettingsEditor" timestamp="1600562812735">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="1066" y="116" key="SettingsEditor/0.0.2560.1050@0.0.2560.1050" timestamp="1600562812735" />
     <state x="274" y="41" width="731" height="975" key="find.popup" timestamp="1600023343800">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="274" y="41" width="731" height="975" key="find.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1600023343800" />
-    <state x="859" y="15" width="840" height="1034" key="search.everywhere.popup" timestamp="1600556418228">
+    <state x="859" y="15" width="840" height="1034" key="search.everywhere.popup" timestamp="1600563855015">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state x="859" y="15" width="840" height="1034" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1600556418228" />
+    <state x="859" y="15" width="840" height="1034" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1600563855015" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -228,6 +220,15 @@
             <option name="methodName" value="destroy" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/OrcamentoController.php</url>
+          <line>52</line>
+          <properties>
+            <option name="className" value="\App\Http\Controllers\OrcamentoController" />
+            <option name="methodName" value="create" />
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
